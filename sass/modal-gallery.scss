@@ -1,0 +1,44 @@
+@use 'variables';
+@use 'mixins/mixins';
+.modal-gallery {
+    width: 446px;
+    &__background {
+        @include mixins.modal-background;
+        display: grid;
+        place-content: center;
+        visibility: hidden;
+    }
+    &__background-opacity {
+        @include mixins.modal-background-opacity;
+    }
+    &__image-container {
+        background-image: url('../images/image-product-1.jpg');
+        height: 446px;
+        background-size: cover;
+        border-radius: 16px;
+        margin-bottom: 32px;
+        position: relative;
+    }
+    &__thumnails {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__thumnail {
+        width: 21%;
+        border-radius: 15px;
+        @include mixins.opacity(0.3);
+
+    }
+    &__previus {
+        @include mixins.image-btn(190px,
+        -15px);
+    }
+    &__next {
+        @include mixins.image-btn(190px,
+        420px);
+    }
+}
+
+.visibility {
+      visibility: visible;
+}

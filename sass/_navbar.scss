@@ -1,0 +1,27 @@
+@use 'variables';
+
+.navbar {
+      display: none;
+      width: 400px;
+      &__items{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+      }
+      &__link {
+            text-decoration: none;
+            color: variables.$dark-grayish-blue;
+            display: block;
+            height: 112px;
+            padding-top: 42px;
+            padding-left: 15px;
+            padding-right: 15px;
+            &:hover{
+                  border-bottom: 4px solid variables.$orange;
+            }
+      }
+
+      @media(min-width: variables.$width-desktop) {
+            display: block;
+      }
+}

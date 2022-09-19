@@ -1,0 +1,76 @@
+@use 'variables';
+.header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      padding: 0 24px;
+
+      @media(min-width: variables.$width-desktop) {
+            height: 112px;
+            border-bottom: 1px solid variables.$grayish-blue;
+      }
+
+      &__navigation{
+            width: 174px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media(min-width: variables.$width-desktop) {
+                  width: 590px;
+            }
+      }
+      &__menu {
+            &:hover {
+                  cursor: pointer;
+            }
+            @media(min-width: variables.$width-desktop) {
+                  display: none;
+            }
+      }
+      &__cart-avatar{
+            display: flex;
+            align-items: center;
+            width: 70px;
+            justify-content: space-between;
+
+            @media(min-width: variables.$width-desktop) {
+                  width: 125px;
+            }
+      }
+      &__avatar{
+            width: 24px;
+            @media(min-width: variables.$width-desktop) {
+                  width: 48px;
+            }
+            &:hover{
+                  cursor: pointer;
+                  border: 2px solid variables.$orange;
+                  border-radius: 100%;
+            }
+      }
+      
+      &__cart{
+            position: relative;
+            &--notification{
+                  display: none;
+                  background-color: variables.$orange;
+                  width: 15px;
+                  height: 12px;
+                  border-radius: 16px;
+                  position: absolute;
+                  top: -2px;
+                  right: -5px;
+                  font-size: 0.6em;
+                  text-align: center;
+                  color: variables.$white;
+            }
+            &:hover{
+                  cursor: pointer;
+            }
+      }
+
+      
+}

@@ -1,0 +1,60 @@
+@use '../variables' as v;
+
+@mixin modal-background {
+    background-color: v.$black-modal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 100%;
+    z-index: 1;
+}
+
+@mixin modal-background-opacity {
+    display: none;
+}
+
+@mixin image-btn($top, $left) {
+    background-color: v.$white;
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: $top;
+    left: $left;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin changeNumber($padding-y, $padding-x) {
+    width: 20px;
+    margin: 0 15px;
+    padding: $padding-y, $padding-x;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@mixin button {
+    background-color: v.$orange;
+    border: none;
+    border-radius: 8px;
+    color: v.$white;
+    height: 54px;
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+@mixin opacity($opacity) {
+    &:hover {
+        cursor: pointer;
+        opacity:$opacity;
+    }
+}
